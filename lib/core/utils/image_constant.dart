@@ -11,6 +11,7 @@ class ImageConstant {
 
   static String imgEllipse2665 = '$imagePath/img_ellipse_2665.png';
 
+  static String translatorsvg = '$imagePath/translate-black-lineal-16029(1).svg';
   // Get started One images
   static String imgEllipse2668 = '$imagePath/img_ellipse_2668.png';
 

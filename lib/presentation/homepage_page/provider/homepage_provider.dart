@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/app_export.dart';
 import '../models/homepage_model.dart';
-import '../models/thirtynine_item_model.dart';
-import '../models/thirtyeight_item_model.dart';
-import '../models/fortyone_item_model.dart';
-import '../models/forty_item_model.dart';
-import '../models/fortytwo_item_model.dart';
 
 /// A provider class for the HomepagePage.
 ///

@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:joybox/core/app_export.dart';
 
 // ignore: must_be_immutable
-class FortyItemWidget extends StatelessWidget {
-  FortyItemWidget(
-    this.fortyItemModelObj, {
+class BuildOfferWidgetItems extends StatelessWidget {
+  BuildOfferWidgetItems(
+    this.menuofferItemModelObj, {
     Key? key,
   }) : super(
           key: key,
         );
 
-  FortyItemModel fortyItemModelObj;
+  OfferItemModel menuofferItemModelObj;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class FortyItemWidget extends StatelessWidget {
                           SizedBox(
                             width: 124.h,
                             child: Text(
-                              fortyItemModelObj.getOffClock!,
+                              menuofferItemModelObj.getOffClock!,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style:
@@ -57,7 +57,7 @@ class FortyItemWidget extends StatelessWidget {
                           ),
                           SizedBox(height: 1.v),
                           Text(
-                            fortyItemModelObj.ramadanOffer!,
+                            menuofferItemModelObj.ramadanOffer!,
                             style: CustomTextStyles.bodySmallWhiteA700_1,
                           ),
                           SizedBox(height: 16.v),
@@ -73,7 +73,7 @@ class FortyItemWidget extends StatelessWidget {
                       ),
                     ),
                     CustomImageView(
-                      imagePath: fortyItemModelObj?.image,
+                      imagePath: menuofferItemModelObj?.image,
                       height: 137.v,
                       width: 154.h,
                       radius: BorderRadius.circular(
@@ -86,7 +86,7 @@ class FortyItemWidget extends StatelessWidget {
               ),
             ),
             CustomImageView(
-              imagePath: fortyItemModelObj?.image1,
+              imagePath: menuofferItemModelObj?.image1,
               height: 171.v,
               width: 193.h,
               alignment: Alignment.centerRight,

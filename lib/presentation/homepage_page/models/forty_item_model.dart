@@ -1,8 +1,8 @@
 import '../../../core/app_export.dart';
 
 /// This class is used in the [forty_item_widget] screen.
-class FortyItemModel {
-  FortyItemModel({
+class OfferItemModel {
+  OfferItemModel({
     this.getOffClock,
     this.ramadanOffer,
     this.image,

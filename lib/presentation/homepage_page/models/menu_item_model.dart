@@ -1,8 +1,8 @@
 import '../../../core/app_export.dart';
 
 /// This class is used in the [fortyone_item_widget] screen.
-class FortyoneItemModel {
-  FortyoneItemModel({
+class MenuItemModel {
+  MenuItemModel({
     this.macComboDeal,
     this.favorite,
     this.burgerFriseDrink,

@@ -1,18 +1,18 @@
-import '../models/fortyone_item_model.dart';
+import '../models/menu_item_model.dart';
 import 'package:joybox/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:joybox/core/app_export.dart';
 
 // ignore: must_be_immutable
-class FortyoneItemWidget extends StatelessWidget {
-  FortyoneItemWidget(
-    this.fortyoneItemModelObj, {
+class JoyBoxChoiceItemWidget extends StatelessWidget {
+  JoyBoxChoiceItemWidget(
+    this.menuItemModelObj, {
     Key? key,
   }) : super(
           key: key,
         );
 
-  FortyoneItemModel fortyoneItemModelObj;
+  MenuItemModel menuItemModelObj;
 
   @override
   Widget build(BuildContext context) {
@@ -40,13 +40,15 @@ class FortyoneItemWidget extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 5.h),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          fortyoneItemModelObj.macComboDeal!,
+                          menuItemModelObj.macComboDeal!,
                           style: CustomTextStyles.titleSmallGray900,
                         ),
                         CustomImageView(
-                          imagePath: fortyoneItemModelObj?.favorite,
+                          fit: BoxFit.contain,
+                          imagePath: menuItemModelObj?.favorite,
                           height: 16.v,
                           width: 18.h,
                           margin: EdgeInsets.only(left: 10.h),
@@ -58,7 +60,7 @@ class FortyoneItemWidget extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 5.h),
                     child: Text(
-                      fortyoneItemModelObj.burgerFriseDrink!,
+                      menuItemModelObj.burgerFriseDrink!,
                       style: CustomTextStyles.bodySmallGray900,
                     ),
                   ),
@@ -66,7 +68,7 @@ class FortyoneItemWidget extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 5.h),
                     child: Text(
-                      fortyoneItemModelObj.rs!,
+                      menuItemModelObj.rs!,
                       style: CustomTextStyles.labelLargeGray900,
                     ),
                   ),
@@ -85,9 +87,10 @@ class FortyoneItemWidget extends StatelessWidget {
             ),
           ),
           CustomImageView(
-            imagePath: fortyoneItemModelObj?.imageNineteen,
+            imagePath: menuItemModelObj?.imageNineteen,
             height: 146.v,
             width: 232.h,
+            fit: BoxFit.contain,
             alignment: Alignment.bottomRight,
           ),
         ],

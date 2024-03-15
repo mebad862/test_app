@@ -1,17 +1,17 @@
-import '../models/thirtyeight_item_model.dart';
+import '../models/traditional_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:joybox/core/app_export.dart';
 
 // ignore: must_be_immutable
-class ThirtyeightItemWidget extends StatelessWidget {
-  ThirtyeightItemWidget(
-    this.thirtyeightItemModelObj, {
+class traditional_Item_Widget extends StatelessWidget {
+  traditional_Item_Widget(
+    this.TradtionalItemModelObj, {
     Key? key,
   }) : super(
           key: key,
         );
 
-  ThirtyeightItemModel thirtyeightItemModelObj;
+  TradtionalRestaurantsItemModel TradtionalItemModelObj;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class ThirtyeightItemWidget extends StatelessWidget {
                     children: [
                       SizedBox(height: 53.v),
                       Text(
-                        thirtyeightItemModelObj.theEastEnd!,
+                        TradtionalItemModelObj.theEastEnd!,
                         style: theme.textTheme.labelLarge,
                       ),
                     ],
@@ -50,7 +50,7 @@ class ThirtyeightItemWidget extends StatelessWidget {
                 ),
               ),
               CustomImageView(
-                imagePath: thirtyeightItemModelObj?.theEastEnd1,
+                imagePath: TradtionalItemModelObj?.theEastEnd1,
                 height: 96.v,
                 width: 105.h,
                 radius: BorderRadius.circular(
