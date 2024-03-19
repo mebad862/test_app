@@ -1,4 +1,4 @@
-import '../models/forty_item_model.dart';
+import '../models/OfferItemModel.dart';
 import 'package:joybox/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:joybox/core/app_export.dart';
@@ -19,7 +19,7 @@ class BuildOfferWidgetItems extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: SizedBox(
-        height: 171.v,
+        height: 191.v,
         width: 327.h,
         child: Stack(
           alignment: Alignment.centerRight,
@@ -74,8 +74,9 @@ class BuildOfferWidgetItems extends StatelessWidget {
                     ),
                     CustomImageView(
                       imagePath: menuofferItemModelObj?.image,
-                      height: 137.v,
-                      width: 154.h,
+                      // height: 137.v,
+                      // width: 154.h,
+                      fit:BoxFit.contain     ,
                       radius: BorderRadius.circular(
                         10.h,
                       ),
@@ -87,8 +88,9 @@ class BuildOfferWidgetItems extends StatelessWidget {
             ),
             CustomImageView(
               imagePath: menuofferItemModelObj?.image1,
-              height: 171.v,
-              width: 193.h,
+              // height: 171.v,
+              // width: 193.h,
+              fit: BoxFit.contain,
               alignment: Alignment.centerRight,
             ),
           ],

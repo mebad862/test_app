@@ -2,7 +2,7 @@ import 'thirtynine_item_model.dart';
 import '../../../core/app_export.dart';
 import 'traditional_item_model.dart';
 import 'menu_item_model.dart';
-import 'forty_item_model.dart';
+import 'OfferItemModel.dart';
 import 'fortytwo_item_model.dart';
 
 class HomepageModel {
@@ -34,7 +34,12 @@ class HomepageModel {
         getOffClock: "Get 20% Off Clock Tower",
         ramadanOffer: "Ramadan Offer",
         image: ImageConstant.imgGroup38289,
-        image1: ImageConstant.imgMaskGroup)
+        image1: ImageConstant.imgMaskGroup),
+    OfferItemModel(
+        getOffClock: "Get 30% Off Burger O’clock",
+        ramadanOffer: "Combo Deals",
+        image: ImageConstant.imgGroup38289,
+        image1: 'assets/images/pngwing.com - 2023-12-04T120552 1.png')
   ];
 
   List<FortytwoItemModel> fortytwoItemList = [

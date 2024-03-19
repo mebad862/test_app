@@ -11,7 +11,7 @@ import 'widgets/traditional_Item_Widget.dart';
 import 'models/traditional_item_model.dart';
 import 'models/menu_item_model.dart';
 import 'widgets/offer_item_widget.dart';
-import 'models/forty_item_model.dart';
+import 'models/OfferItemModel.dart';
 import 'widgets/fortytwo_item_widget.dart';
 import 'models/fortytwo_item_model.dart';
 import 'package:flutter/material.dart';
@@ -151,25 +151,37 @@ class HomepagePageState extends State<HomepagePage> {
                   BuildChoiceImages(context),
                   SizedBox(height: 42.v),
                   _BuildOfferItem(context),
-                  // SizedBox(height: 24.v),
-                  // SizedBox(
-                  //   height: 9.v,
-                  //   child: AnimatedSmoothIndicator(
-                  //     activeIndex: 0,
-                  //     count: 3,
-                  //     effect: ScrollingDotsEffect(
-                  //       spacing: 7,
-                  //       activeDotColor: appTheme.red50001,
-                  //       dotColor: appTheme.blueGray100,
-                  //       dotHeight: 9.v,
-                  //       dotWidth: 9.h,
-                  //     ),
-                  //   ),
-                  // ),
-                  // SizedBox(height: 39.v),
-                  // _buildFortySeven(context),
-                  // SizedBox(height: 25.v),
-                  // _buildFortyTwo(context),
+                  SizedBox(height: 24.v),
+                  SizedBox(
+                    height: 9.v,
+                    child: AnimatedSmoothIndicator(
+                      activeIndex: 0,
+                      count: 3,
+                      effect: ScrollingDotsEffect(
+                        spacing: 7,
+                        activeDotColor: appTheme.red50001,
+                        dotColor: appTheme.blueGray100,
+                        dotHeight: 9.v,
+                        dotWidth: 9.h,
+                      ),
+                    ),
+                  ),
+                //   SizedBox(height: 39.v),
+                //  // _buildFortySeven(context),
+                //  _buildSeventyFive(context),
+                  SizedBox(height: 25.v),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Your Favourite meal",style: TextStyle(fontSize: 18.h,fontWeight: FontWeight.bold),),
+                        Text("View All"), 
+                    
+                      ],
+                    ),
+                  ),
+                  _buildFortyTwo(context),
                 ],
               ),
             ),
@@ -502,6 +514,13 @@ class HomepagePageState extends State<HomepagePage> {
                 );
               },
             ),
+            SizedBox(height: 30.h,),
+             CustomImageView(
+            imagePath: ImageConstant.imgVectorAmber40051x430,
+            height: 51.v,
+            width: 430.h,
+            alignment: Alignment.bottomCenter,
+          ),
           ],
         ),
       ),
@@ -522,12 +541,12 @@ class HomepagePageState extends State<HomepagePage> {
             width: 429.h,
             alignment: Alignment.center,
           ),
-          CustomImageView(
-            imagePath: ImageConstant.imgVectorAmber40051x430,
-            height: 51.v,
-            width: 430.h,
-            alignment: Alignment.bottomCenter,
-          ),
+          // CustomImageView(
+          //   imagePath: ImageConstant.imgVectorAmber40051x430,
+          //   height: 51.v,
+          //   width: 430.h,
+          //   alignment: Alignment.bottomCenter,
+          // ),
           JoyBoxChoiceItemWidget(MenuItemModel()),
         ],
       ),
@@ -539,7 +558,7 @@ class HomepagePageState extends State<HomepagePage> {
     return Align(
       alignment: Alignment.centerRight,
       child: SizedBox(
-        height: 190.v,
+        height: 210.v,
         width: 402.h,
         child: Stack(
           alignment: Alignment.topRight,
@@ -586,6 +605,8 @@ class HomepagePageState extends State<HomepagePage> {
                   ),
                   itemCount: provider.homepageModelObj.fortyItemList.length,
                   itemBuilder: (context, index, realIndex) {
+                    print(
+                        provider.homepageModelObj.fortyItemList[index].toString());
                     OfferItemModel model =
                         provider.homepageModelObj.fortyItemList[index];
                     return BuildOfferWidgetItems(
@@ -604,7 +625,7 @@ class HomepagePageState extends State<HomepagePage> {
   // /// Section Widget
   Widget _buildFortyTwo(BuildContext context) {
     return SizedBox(
-      height: 278.v,
+      height: 300.v,
       child: Consumer<HomepageProvider>(
         builder: (context, provider, child) {
           return ListView.separated(

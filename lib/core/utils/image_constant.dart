@@ -174,6 +174,7 @@ class ImageConstant {
   static String imgHome = '$imagePath/img_home.svg';
 
   static String imgFrame = '$imagePath/img_frame.svg';
+  static String offerBurgerImage = '$imagePath/pngwing.com - 2023-12-04T120552 1.png';
 
   static String imgFrameWhiteA700 = '$imagePath/img_frame_white_a700.svg';
 
