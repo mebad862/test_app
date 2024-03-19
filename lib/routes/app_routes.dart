@@ -32,6 +32,6 @@ class AppRoutes {
         homepageContainerScreen: HomepageContainerScreen.builder,
         homepagePage:HomepagePage.builder,
         appNavigationScreen: AppNavigationScreen.builder,
-        initialRoute: HomepageContainerScreen.builder
+        initialRoute: HomepagePage.builder
       };
 }
