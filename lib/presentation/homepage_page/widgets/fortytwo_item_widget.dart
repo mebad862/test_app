@@ -24,49 +24,43 @@ class FortytwoItemWidget extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10),
       child: SizedBox(
         width: 200.h,
-      child: Stack(
-        alignment: Alignment.centerRight,
-        //clipBehavior: Clip.antiAliasWithSaveLayer,
-      
-        children: [
-          Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-       // mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("McDonald's"),
-      Text("DHA PHASE 2"),
-       CustomRatingBar(color: Colors.redAccent,
-                        initialRating: 4,
-                      ),
-        ],
-      ),
-      
-      Container(
-        padding: EdgeInsets.all(10.h),
-        decoration: AppDecoration.fillAmber.copyWith(
-                            borderRadius: BorderRadiusStyle.customBorderTL50,
-                          ),
-      
-                          child: _buildInsideFavWidget(
-                            imagePath: fortytwoItemModelObj.pngwing,
-                          ),
-      
-                          
-      ),
-      Positioned(
-        
-        child: CustomImageView(
-                                          imagePath:ImageConstant.imgPngwing66,
-                                         fit: BoxFit.contain,
-                                         width: 240.v,
-                                         height: 140.h,
-                                          
-                                        ),
-      ),
-      
-        ],
-      ),
-      
+        child: Stack(
+          alignment: Alignment.centerRight,
+          //clipBehavior: Clip.antiAliasWithSaveLayer,
+
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("McDonald's"),
+                Text("DHA PHASE 2"),
+                CustomRatingBar(
+                  color: Colors.redAccent,
+                  initialRating: 4,
+                ),
+              ],
+            ),
+            Container(
+              padding: EdgeInsets.all(10.h),
+              decoration: AppDecoration.fillAmber.copyWith(
+                borderRadius: BorderRadiusStyle.customBorderTL50,
+              ),
+              child: _buildInsideFavWidget(
+                imagePath: fortytwoItemModelObj.pngwing,
+              ),
+            ),
+            Positioned(
+              child: CustomImageView(
+                imagePath: ImageConstant.imgPngwing66,
+                fit: BoxFit.contain,
+                width: 240.v,
+                height: 140.h,
+              ),
+            ),
+          ],
+        ),
+
         // child: CustomImageView(
         //   imagePath: fortytwoItemModelObj?.pngwing,
         //   height: 169.v,
@@ -81,11 +75,8 @@ class FortytwoItemWidget extends StatelessWidget {
   }
 }
 
-
 class _buildInsideFavWidget extends StatelessWidget {
-   _buildInsideFavWidget({
-    required this.imagePath,
-    Key? key}) : super(key: key);
+  _buildInsideFavWidget({required this.imagePath, Key? key}) : super(key: key);
 
   String? imagePath;
 
@@ -100,29 +91,33 @@ class _buildInsideFavWidget extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-           // mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("McDonald's",style: TextStyle(fontWeight:FontWeight.bold,fontSize: 14.h),),
-          Text("DHA PHASE 2"),
-           CustomRatingBar(color: Colors.redAccent,
-                            initialRating: 4,
-                          ),
+              Text(
+                "McDonald's",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.h),
+              ),
+              Text("DHA PHASE 2"),
+              CustomRatingBar(
+                color: Colors.redAccent,
+                initialRating: 4,
+              ),
             ],
           ),
           Row(
             //crossAxisAlignment: CrossAxisAlignment.center,
-           // mainAxisAlignment: MainAxisAlignment.center,
-           mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text("Rs.599",style: TextStyle(fontWeight:FontWeight.bold,fontSize: 14.h)),
-          CustomImageView(
-                                          imagePath:ImageConstant.imgCart,
-                                         fit: BoxFit.contain,
-                                         width: 40.v,
-                                         height: 26.h,
-                                          
-                                        ),
-           
+              Text("Rs.599",
+                  style:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 14.h)),
+              CustomImageView(
+                imagePath: ImageConstant.imgCart,
+                fit: BoxFit.contain,
+                width: 40.v,
+                height: 26.h,
+              ),
             ],
           ),
         ],

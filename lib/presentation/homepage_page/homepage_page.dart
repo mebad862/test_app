@@ -1,3 +1,6 @@
+import 'package:flutter/widgets.dart';
+import 'package:joybox/presentation/Fast%20food/fast_food/fast_food_main/fast_food_main.dart';
+import 'package:joybox/presentation/Fast%20food/inner_fast_food_res_screen/inner_fastfood_res.dart';
 import 'package:joybox/presentation/homepage_page/widgets/divider_widget.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:joybox/presentation/homepage_page/widgets/joybox_choice_item_widget.dart';
@@ -48,6 +51,7 @@ class HomepagePageState extends State<HomepagePage> {
         resizeToAvoidBottomInset: false,
         body: Container(
           width: 430.h,
+          padding: EdgeInsets.all(8),
           decoration: AppDecoration.fillWhiteA,
           child: SingleChildScrollView(
             child: Padding(
@@ -363,9 +367,12 @@ class HomepagePageState extends State<HomepagePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                "lbl_fast_food".tr,
-                                style: CustomTextStyles.titleSmallGray100,
+                              GestureDetector(
+                                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => InnerFastFoodResScreen(),)),
+                                child: Text(
+                                  "lbl_fast_food".tr,
+                                  style: CustomTextStyles.titleSmallGray100,
+                                ),
                               ),
                               menutabwidget(tabname: 'Pakistani Food'),
                               menutabwidget(tabname: 'Chinese'),

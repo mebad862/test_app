@@ -172,6 +172,7 @@ class ImageConstant {
   static String imgKfc = '$imagePath/img_kfc.png';
 
   static String imgHome = '$imagePath/img_home.svg';
+  static String imgInnerFast = '$imagePath/image 65.svg';
 
   static String imgFrame = '$imagePath/img_frame.svg';
   static String offerBurgerImage = '$imagePath/pngwing.com - 2023-12-04T120552 1.png';

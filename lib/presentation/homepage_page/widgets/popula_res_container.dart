@@ -19,6 +19,7 @@ class populaResContainer extends StatelessWidget {
       width: 184.h,
       margin: EdgeInsets.only(left: 13.h),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Stack(
             alignment: Alignment.topLeft,
@@ -113,6 +114,7 @@ class populaResContainer extends StatelessWidget {
                                       alignment: Alignment.topCenter,
                                     ),
                                   ),
+                                  
                                   CustomImageView(
                                     imagePath:
                                         ImageConstant.imgSettingsAmber400,
