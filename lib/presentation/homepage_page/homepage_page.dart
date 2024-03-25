@@ -4,6 +4,7 @@ import 'package:joybox/presentation/Fast%20food/inner_fast_food_res_screen/inner
 import 'package:joybox/presentation/homepage_page/widgets/divider_widget.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:joybox/presentation/homepage_page/widgets/joybox_choice_item_widget.dart';
+import '../fast_food_restaurant_screen/fast_food_restaurant_screen.dart';
 import 'widgets/Appbar_home_widget.dart';
 import 'widgets/Menu widgets/menu_tab_widget.dart';
 import 'widgets/popula_res_container.dart';
@@ -368,7 +369,7 @@ class HomepagePageState extends State<HomepagePage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               GestureDetector(
-                                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => InnerFastFoodResScreen(),)),
+                                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FastFoodRestaurantScreen(),)),
                                 child: Text(
                                   "lbl_fast_food".tr,
                                   style: CustomTextStyles.titleSmallGray100,
